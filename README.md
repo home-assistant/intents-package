@@ -10,9 +10,7 @@ Clone the repo and create a virtual environment:
 ``` sh
 git clone --recursive https://github.com/home-assistant/intents-package
 cd intents-package
-python3 -m venv venv
-venv/bin/pip3 install --upgrade pip
-venv/bin/pip3 install -r requirements.txt
+script/setup
 ```
 
 
