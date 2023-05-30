@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -eo pipefail
+
+# Directory of *this* script
+this_dir="$( cd "$( dirname "$0" )" && pwd )"
+
+# Base directory of repo
+base_dir="$(realpath "${this_dir}/..")"
+
+# Path to virtual environment
+: "${venv:=${base_dir}/venv}"
+
+if [ -d "${venv}" ]; then
+    # Activate virtual environment if available
+    source "${venv}/bin/activate"
+fi
+
+intents_dir="${base_dir}/home_assistant_intents"
+data_dir="${intents_dir}/data"
+rm -rf "${data_dir}"
+rm -rf "${base_dir}/dist"
+
+python3 "${base_dir}/script/merged_output.py" "${data_dir}"
+python3 "${base_dir}/script/write_languages.py" "${data_dir}" > "${intents_dir}/domains.py"
+black "${intents_dir}/domains.py"
+cd "${base_dir}" && python3 -m build
+
+echo "See: ${base_dir}/dist"

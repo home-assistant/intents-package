@@ -1,0 +1,3 @@
+build
+black
+PyYAML>=6.0,<7
