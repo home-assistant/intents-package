@@ -24,6 +24,10 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Update submodule
+        run: |
+          git submodule update --remote
+
       - name: Set up Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v4
         with:
