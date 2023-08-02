@@ -1,5 +1,6 @@
 DOMAINS_AND_LANGUAGES = {
     "homeassistant": [
+        "af",
         "ar",
         "bg",
         "bn",
@@ -57,6 +58,7 @@ DOMAINS_AND_LANGUAGES = {
         "zh-tw",
     ],
     "light": [
+        "af",
         "ar",
         "bg",
         "bn",
@@ -112,4 +114,5 @@ DOMAINS_AND_LANGUAGES = {
         "zh-hk",
         "zh-tw",
     ],
+    "shopping_list": ["de", "de-CH", "en", "fr", "ko", "nb", "nl", "ro", "ru", "sk"],
 }
