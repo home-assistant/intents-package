@@ -136,4 +136,6 @@ DOMAINS_AND_LANGUAGES = {
         "sv",
         "uk",
     ],
+    "todo": ["en", "es", "ro"],
+    "weather": ["en", "es", "ro"],
 }
