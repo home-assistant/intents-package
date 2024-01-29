@@ -21,8 +21,8 @@ rm -rf "${data_dir}"
 rm -rf "${base_dir}/dist"
 
 python3 "${base_dir}/script/merged_output.py" "${data_dir}"
-python3 "${base_dir}/script/write_languages.py" "${data_dir}" > "${intents_dir}/domains.py"
-black "${intents_dir}/domains.py"
+python3 "${base_dir}/script/write_languages.py" "${data_dir}" > "${intents_dir}/languages.py"
+black "${intents_dir}/languages.py"
 cd "${base_dir}" && python3 -m build
 
 echo "See: ${base_dir}/dist"

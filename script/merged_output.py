@@ -46,70 +46,70 @@ def main() -> None:
     args = parser.parse_args()
 
     target = Path(args.target)
+    target.mkdir(parents=True, exist_ok=True)
 
     intent_info = yaml.safe_load(INTENTS_FILE.read_text())
-    intent_by_domain: dict[str, list] = {}
-    for intent, info in intent_info.items():
-        if not info.get("supported", True):
-            continue
-        intent_by_domain.setdefault(info["domain"], []).append(intent)
 
-    for domain in intent_by_domain:
-        (target / domain).mkdir(parents=True, exist_ok=True)
+    # Skip intents that are not supported in Home Assistant
+    supported_intents = set(
+        intent for intent, info in intent_info.items() if info.get("supported")
+    )
 
+    # Create one JSON file per language
     for language in LANGUAGES:
+        # Merge language's sentence template YAML files
         merged_sentences: dict = {}
         for sentence_file in (SENTENCE_DIR / language).iterdir():
             merge_dict(merged_sentences, yaml.safe_load(sentence_file.read_text()))
 
+        # Merge language's response YAML files
         merged_responses: dict = {}
         for response_file in (RESPONSE_DIR / language).iterdir():
             merge_dict(merged_responses, yaml.safe_load(response_file.read_text()))
 
-        for domain, supported_intents in intent_by_domain.items():
-            domain_intents = {}
-            for intent, info in merged_sentences["intents"].items():
-                if intent not in supported_intents:
-                    continue
-
-                data = []
-                for data_set in info["data"]:
-                    if len(data_set["sentences"]) > 0:
-                        data.append(data_set)
-
-                if data:
-                    domain_intents[intent] = {
-                        **info,
-                        "data": data,
-                    }
-
-            domain_responses = {
-                intent: info
-                for intent, info in merged_responses["responses"]["intents"].items()
-                if intent in supported_intents
-            }
-
-            if not domain_intents and not domain_responses:
+        lang_intents: dict = {}
+        for intent, info in merged_sentences["intents"].items():
+            if intent not in supported_intents:
                 continue
 
-            if domain == "homeassistant":
-                output: dict = {
-                    **merged_sentences,
-                    "intents": {},
-                }
-            else:
-                output = {"language": language}
+            data = []
+            for data_set in info["data"]:
+                if len(data_set["sentences"]) > 0:
+                    data.append(data_set)
 
-            if domain_intents:
-                output["intents"] = domain_intents
+            if not data:
+                # No sentence templates
+                continue
 
-            if domain_responses:
-                output.setdefault("responses", {})["intents"] = domain_responses
+            lang_intents[intent] = {
+                **info,
+                "data": data,
+            }
 
-            # Write as JSON
-            target_path = target / domain / f"{language}.json"
-            with target_path.open("w", encoding="utf-8") as target_file:
-                json.dump(output, target_file, ensure_ascii=False, indent=2)
+        lang_responses = {
+            intent: info
+            for intent, info in merged_responses["responses"]["intents"].items()
+            if intent in supported_intents
+        }
+
+        if not lang_intents and not lang_responses:
+            # Nothing to export
+            continue
+
+        output: dict = {
+            "language": language,
+            **merged_sentences,
+            "intents": lang_intents,
+        }
+
+        if lang_responses:
+            # Do this separately because merged_sentences contains error responses
+            output.setdefault("responses", {})["intents"] = lang_responses
+
+        # Write as JSON
+        target_path = target / f"{language}.json"
+        with target_path.open("w", encoding="utf-8") as target_file:
+            json.dump(output, target_file, ensure_ascii=False, indent=2)
 
 
 if __name__ == "__main__":
