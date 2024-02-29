@@ -8,12 +8,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).parent.parent
-INTENTS_ROOT = ROOT / "intents"
-SENTENCE_DIR = INTENTS_ROOT / "sentences"
-RESPONSE_DIR = INTENTS_ROOT / "responses"
-LANGUAGES_FILE = INTENTS_ROOT / "languages.yaml"
-INTENTS_FILE = INTENTS_ROOT / "intents.yaml"
-LANGUAGES = sorted(p.name for p in SENTENCE_DIR.iterdir() if p.is_dir())
+INTENTS_DIR = ROOT / "intents"
 
 
 def merge_dict(base_dict, new_dict):
@@ -43,12 +38,21 @@ def merge_dict(base_dict, new_dict):
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("target")
+    parser.add_argument(
+        "--intents-dir", default=INTENTS_DIR, help="Intents repo directory"
+    )
     args = parser.parse_args()
+
+    intents_dir = Path(args.intents_dir)
+    sentence_dir = intents_dir / "sentences"
+    response_dir = intents_dir / "responses"
+    intents_file = intents_dir / "intents.yaml"
+    languages = sorted(p.name for p in sentence_dir.iterdir() if p.is_dir())
 
     target = Path(args.target)
     target.mkdir(parents=True, exist_ok=True)
 
-    intent_info = yaml.safe_load(INTENTS_FILE.read_text())
+    intent_info = yaml.safe_load(intents_file.read_text())
 
     # Skip intents that are not supported in Home Assistant
     supported_intents = set(
@@ -56,15 +60,15 @@ def main() -> None:
     )
 
     # Create one JSON file per language
-    for language in LANGUAGES:
+    for language in languages:
         # Merge language's sentence template YAML files
         merged_sentences: dict = {}
-        for sentence_file in (SENTENCE_DIR / language).iterdir():
+        for sentence_file in (sentence_dir / language).iterdir():
             merge_dict(merged_sentences, yaml.safe_load(sentence_file.read_text()))
 
         # Merge language's response YAML files
         merged_responses: dict = {}
-        for response_file in (RESPONSE_DIR / language).iterdir():
+        for response_file in (response_dir / language).iterdir():
             merge_dict(merged_responses, yaml.safe_load(response_file.read_text()))
 
         lang_intents: dict = {}

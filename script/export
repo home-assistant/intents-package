@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Exports custom intents directory to an output directory.
+set -eo pipefail
+
+# Directory of *this* script
+this_dir="$( cd "$( dirname "$0" )" && pwd )"
+
+# Base directory of repo
+base_dir="$(realpath "${this_dir}/..")"
+
+# Path to virtual environment
+: "${venv:=${base_dir}/venv}"
+
+if [ -d "${venv}" ]; then
+    # Activate virtual environment if available
+    source "${venv}/bin/activate"
+fi
+
+if [ -z "$2" ]; then
+    echo 'Usage: export <intents_dir> <export_dir>'
+    exit 1
+fi
+
+intents_dir="$1"
+export_dir="$2"
+data_dir="${export_dir}/data"
+mkdir -p "${data_dir}"
+
+python3 "${base_dir}/script/merged_output.py" --intents-dir "${intents_dir}" "${data_dir}"
+python3 "${base_dir}/script/write_languages.py" "${data_dir}" > "${export_dir}/languages.py"
+cp "${base_dir}/home_assistant_intents/__init__.py" "${export_dir}/"
