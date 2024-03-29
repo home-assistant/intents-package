@@ -26,6 +26,9 @@ class ErrorKey(str, Enum):
     NO_AREA = "no_area"
     """Area does not exist."""
 
+    NO_FLOOR = "no_floor"
+    """Floor does not exist."""
+
     NO_DOMAIN = "no_domain"
     """No devices exist for a domain."""
 
@@ -37,6 +40,12 @@ class ErrorKey(str, Enum):
 
     NO_DOMAIN_IN_AREA_EXPOSED = "no_domain_in_area_exposed"
     """No devices in an area are exposed for a domain."""
+
+    NO_DOMAIN_IN_FLOOR = "no_domain_in_floor"
+    """No devices in an floor exist for a domain."""
+
+    NO_DOMAIN_IN_FLOOR_EXPOSED = "no_domain_in_floor_exposed"
+    """No devices in an floor are exposed for a domain."""
 
     NO_DEVICE_CLASS = "no_device_class"
     """No devices of a class exist."""
@@ -50,6 +59,12 @@ class ErrorKey(str, Enum):
     NO_DEVICE_CLASS_IN_AREA_EXPOSED = "no_device_class_in_area_exposed"
     """No devices of a class are exposed in an area."""
 
+    NO_DEVICE_CLASS_IN_FLOOR = "no_device_class_in_floor"
+    """No devices of a class exist in an floor."""
+
+    NO_DEVICE_CLASS_IN_FLOOR_EXPOSED = "no_device_class_in_floor_exposed"
+    """No devices of a class are exposed in an floor."""
+
     NO_ENTITY = "no_entity"
     """Entity does not exist."""
 
@@ -62,11 +77,20 @@ class ErrorKey(str, Enum):
     NO_ENTITY_IN_AREA_EXPOSED = "no_entity_in_area_exposed"
     """Entity in area is not exposed."""
 
+    NO_ENTITY_IN_FLOOR = "no_entity_in_floor"
+    """Entity does not exist in floor."""
+
+    NO_ENTITY_IN_FLOOR_EXPOSED = "no_entity_in_floor_exposed"
+    """Entity in floor is not exposed."""
+
     DUPLICATE_ENTITIES = "duplicate_entities"
     """More than one entity matched with the same name."""
 
     DUPLICATE_ENTITIES_IN_AREA = "duplicate_entities_in_area"
     """More than one entity in an area matched with the same name."""
+
+    DUPLICATE_ENTITIES_IN_FLOOR = "duplicate_entities_in_floor"
+    """More than one entity in an floor matched with the same name."""
 
 
 def get_intents(
