@@ -92,6 +92,21 @@ class ErrorKey(str, Enum):
     DUPLICATE_ENTITIES_IN_FLOOR = "duplicate_entities_in_floor"
     """More than one entity in an floor matched with the same name."""
 
+    FEATURE_NOT_SUPPORTED = "feature_not_supported"
+    """Entity does not support a required feature."""
+
+    ENTITY_WRONG_STATE = "entity_wrong_state"
+    """Entity is not in the correct state."""
+
+    TIMER_NOT_FOUND = "timer_not_found"
+    """No timer matched the provided constraints."""
+
+    MULTIPLE_TIMERS_MATCHED = "multiple_timers_matched"
+    """More than one timer targeted for an action matched the constraints."""
+
+    NO_TIMER_SUPPORT = "no_timer_support"
+    """Vocie satellite does not support timers."""
+
 
 def get_intents(
     language: str,
