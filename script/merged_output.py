@@ -2,13 +2,28 @@
 
 import argparse
 import collections
+import logging
 import json
 from pathlib import Path
 
 import yaml
 
+_LOGGER = logging.getLogger(__name__)
+
 ROOT = Path(__file__).parent.parent
 INTENTS_DIR = ROOT / "intents"
+
+IMPORTANT_INTENTS = {
+    "HassTurnOn",
+    "HassTurnOff",
+    "HassNevermind",
+    "HassLightSet",
+    "HassClimateGetTemperature",
+    "HassListAddItem",
+    "HassStartTimer",
+    "HassCancelTimer",
+    "HassTimerStatus",
+}
 
 
 def merge_dict(base_dict, new_dict):
@@ -36,6 +51,8 @@ def merge_dict(base_dict, new_dict):
 
 
 def main() -> None:
+    logging.basicConfig(level=logging.INFO)
+
     parser = argparse.ArgumentParser()
     parser.add_argument("target")
     parser.add_argument(
@@ -60,6 +77,7 @@ def main() -> None:
     )
 
     # Create one JSON file per language
+    num_processed_languages = 0
     for language in languages:
         # Merge language's sentence template YAML files
         merged_sentences: dict = {}
@@ -71,15 +89,38 @@ def main() -> None:
         for response_file in (response_dir / language).iterdir():
             merge_dict(merged_responses, yaml.safe_load(response_file.read_text()))
 
+        errors_translated = not any(
+            translation.startswith("TODO ")
+            for translation in merged_sentences["responses"]["errors"].values()
+        )
+        if not errors_translated:
+            _LOGGER.warning(
+                "Skipping language %s because it doesn't have all errors translated",
+                language,
+            )
+            continue
+
+        skip_language = False
         lang_intents: dict = {}
         for intent, info in merged_sentences["intents"].items():
             if intent not in supported_intents:
                 continue
 
+            num_intent_sentences = 0
             data = []
             for data_set in info["data"]:
                 if len(data_set["sentences"]) > 0:
                     data.append(data_set)
+                    num_intent_sentences += len(data_set["sentences"])
+
+            if (num_intent_sentences == 0) and (intent in IMPORTANT_INTENTS):
+                skip_language = True
+                _LOGGER.warning(
+                    "Skipping language %s because it doesn't have sentences for %s",
+                    language,
+                    intent,
+                )
+                break
 
             if not data:
                 # No sentence templates
@@ -89,6 +130,10 @@ def main() -> None:
                 **info,
                 "data": data,
             }
+
+        if skip_language:
+            # Not usable
+            continue
 
         lang_responses = {
             intent: info
@@ -114,6 +159,16 @@ def main() -> None:
         target_path = target / f"{language}.json"
         with target_path.open("w", encoding="utf-8") as target_file:
             json.dump(output, target_file, ensure_ascii=False, indent=2)
+
+        num_processed_languages += 1
+
+    num_languages = len(languages)
+    if num_processed_languages < num_languages:
+        _LOGGER.warning(
+            "Skipped %s out of %s language(s)",
+            num_languages - num_processed_languages,
+            num_languages,
+        )
 
 
 if __name__ == "__main__":
