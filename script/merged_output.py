@@ -13,17 +13,7 @@ _LOGGER = logging.getLogger(__name__)
 ROOT = Path(__file__).parent.parent
 INTENTS_DIR = ROOT / "intents"
 
-IMPORTANT_INTENTS = {
-    "HassTurnOn",
-    "HassTurnOff",
-    "HassNevermind",
-    "HassLightSet",
-    "HassClimateGetTemperature",
-    "HassListAddItem",
-    "HassStartTimer",
-    "HassCancelTimer",
-    "HassTimerStatus",
-}
+IMPORTANT_INTENTS = {"HassTurnOn", "HassTurnOff"}
 
 
 def merge_dict(base_dict, new_dict):
