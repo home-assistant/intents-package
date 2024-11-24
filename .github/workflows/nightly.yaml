@@ -15,7 +15,7 @@ jobs:
   nightly:
     name: Nightly
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'home-assistant/intents-package' }}
+    if: ${{ github.repository == 'home-asst/intents-package' }}
     permissions:
       contents: write
     steps:
