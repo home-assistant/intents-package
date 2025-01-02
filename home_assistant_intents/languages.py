@@ -32,6 +32,7 @@ LANGUAGES = [
     "mn",
     "ms",
     "nb",
+    "ne",
     "nl",
     "pl",
     "pt",
