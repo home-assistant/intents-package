@@ -42,6 +42,7 @@ LANGUAGES = [
     "sk",
     "sl",
     "sr",
+    "sr-Latn",
     "sv",
     "sw",
     "te",
