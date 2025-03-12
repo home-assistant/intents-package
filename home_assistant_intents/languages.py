@@ -25,6 +25,7 @@ LANGUAGES = [
     "it",
     "ka",
     "ko",
+    "kw",
     "lb",
     "lt",
     "lv",

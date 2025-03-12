@@ -1,8 +1,10 @@
 """API for home_assistant_intents package."""
+
 import importlib.resources
 import json
 import os
 import typing
+from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
 from typing import IO, Any, Callable, Dict, List, Optional
@@ -105,7 +107,16 @@ class ErrorKey(str, Enum):
     """More than one timer targeted for an action matched the constraints."""
 
     NO_TIMER_SUPPORT = "no_timer_support"
-    """Vocie satellite does not support timers."""
+    """Voice satellite does not support timers."""
+
+
+@dataclass
+class LanguageScores:
+    """Support scores for a language from 0 (no support) to 3 (full support)."""
+
+    cloud: int
+    focused_local: int
+    full_local: int
 
 
 def get_intents(
@@ -114,13 +125,33 @@ def get_intents(
 ) -> Optional[Dict[str, Any]]:
     """Load intents by language."""
     intents_path = _DATA_DIR / f"{language}.json"
-    if intents_path.exists():
-        with intents_path.open(encoding="utf-8") as intents_file:
-            return json_load(intents_file)
+    if not intents_path.exists():
+        return None
 
-    return None
+    with intents_path.open(encoding="utf-8") as intents_file:
+        return json_load(intents_file)
 
 
 def get_languages() -> List[str]:
     """Return a list of available languages."""
     return LANGUAGES
+
+
+def get_language_scores(
+    json_load: Callable[[IO[str]], Dict[str, Any]] = json.load,
+) -> Dict[str, LanguageScores]:
+    """Get support scores by language."""
+    scores_path = _DIR / "language_scores.json"
+    if not scores_path.exists():
+        return {}
+
+    with scores_path.open(encoding="utf-8") as scores_file:
+        scores_dict = json_load(scores_file)
+        return {
+            lang_key: LanguageScores(
+                cloud=lang_scores.get("cloud", 0),
+                focused_local=lang_scores.get("focused_local", 0),
+                full_local=lang_scores.get("full_local", 0),
+            )
+            for lang_key, lang_scores in scores_dict.items()
+        }

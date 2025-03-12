@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name        = "home-assistant-intents"
-version     = "2025.3.5"
+version     = "2025.3.12"
 license     = {text = "Apache-2.0"}
 description = "Intents for Home Assistant"
 readme      = "README.md"
@@ -35,3 +35,10 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 include = ["home_assistant_intents"]
+
+[tool.setuptools.package-data]
+"home_assistant_intents" = [
+    "LICENSE.md",
+    "home_assistant_intents/data/*.json",
+    "home_assistant_intents/language_scores.json"
+]

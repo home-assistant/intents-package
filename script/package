@@ -22,6 +22,7 @@ rm -rf "${base_dir}/dist"
 
 python3 "${base_dir}/script/merged_output.py" "${data_dir}"
 python3 "${base_dir}/script/write_languages.py" "${data_dir}" > "${intents_dir}/languages.py"
+python3 "${base_dir}/script/write_language_scores.py" "${base_dir}/intents" > "${intents_dir}/language_scores.json"
 black "${intents_dir}/languages.py"
 cd "${base_dir}" && python3 -m build
 

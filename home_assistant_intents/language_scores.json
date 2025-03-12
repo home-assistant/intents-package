@@ -1,0 +1,297 @@
+{
+  "af_ZA": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ar_JO": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "bg_BG": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "bn_BD": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "bn_IN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ca_ES": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "cs_CZ": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "da_DK": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "de_DE": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 3
+  },
+  "de_CH": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "el_GR": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "en_US": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 3
+  },
+  "es_MX": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 3
+  },
+  "et_EE": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "eu_ES": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "fa_IR": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "fi_FI": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "fr_FR": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 0
+  },
+  "gl_ES": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "gu_IN": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "he_IL": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "hi_IN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "hr_HR": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "hu_HU": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "id_ID": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "is_IS": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "it_IT": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 3
+  },
+  "ka_GE": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "kn_IN": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ko_KR": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "lb_LU": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "lt_LT": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "lv_LV": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ml_IN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "mn_MN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "mr_IN": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ms_MY": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "nb_NO": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ne_NP": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "nl_BE": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "nl_NL": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 0
+  },
+  "pl_PL": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "pt_PT": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 3
+  },
+  "pt_BR": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 3
+  },
+  "ro_RO": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ru_RU": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sk_SK": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sl_SI": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sr_RS": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sv_SE": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sw_KE": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "te_IN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "th_TH": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "tr_TR": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "uk_UA": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ur_IN": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "vi_VN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "zh_CN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "zh_HK": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  }
+}
