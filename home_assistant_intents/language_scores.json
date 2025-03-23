@@ -59,6 +59,16 @@
     "focused_local": 2,
     "full_local": 3
   },
+  "en_GB": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 3
+  },
+  "es_ES": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 3
+  },
   "es_MX": {
     "cloud": 3,
     "focused_local": 2,
@@ -230,7 +240,7 @@
     "full_local": 0
   },
   "sk_SK": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -291,6 +301,11 @@
   },
   "zh_HK": {
     "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "zh_TW": {
+    "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   }
