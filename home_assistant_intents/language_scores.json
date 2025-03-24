@@ -1,310 +1,310 @@
 {
-  "af_ZA": {
+  "af-ZA": {
     "cloud": 0,
     "focused_local": 0,
     "full_local": 0
   },
-  "ar_JO": {
+  "ar-JO": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "bg_BG": {
+  "bg-BG": {
     "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
-  "bn_BD": {
+  "bn-BD": {
     "cloud": 0,
     "focused_local": 0,
     "full_local": 0
   },
-  "bn_IN": {
+  "bn-IN": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "ca_ES": {
+  "ca-ES": {
     "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
-  "cs_CZ": {
+  "cs-CZ": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "da_DK": {
+  "da-DK": {
     "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
-  "de_DE": {
+  "de-DE": {
     "cloud": 3,
     "focused_local": 2,
     "full_local": 3
   },
-  "de_CH": {
+  "de-CH": {
     "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
-  "el_GR": {
+  "el-GR": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "en_US": {
+  "en-US": {
     "cloud": 3,
     "focused_local": 2,
     "full_local": 3
   },
-  "en_GB": {
+  "en-GB": {
     "cloud": 3,
     "focused_local": 2,
     "full_local": 3
   },
-  "es_ES": {
+  "es-ES": {
     "cloud": 3,
     "focused_local": 2,
     "full_local": 3
   },
-  "es_MX": {
+  "es-MX": {
     "cloud": 3,
     "focused_local": 2,
     "full_local": 3
   },
-  "et_EE": {
+  "et-EE": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "eu_ES": {
+  "eu-ES": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "fa_IR": {
+  "fa-IR": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "fi_FI": {
+  "fi-FI": {
     "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
-  "fr_FR": {
+  "fr-FR": {
     "cloud": 3,
     "focused_local": 2,
     "full_local": 0
   },
-  "gl_ES": {
+  "gl-ES": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "gu_IN": {
+  "gu-IN": {
     "cloud": 0,
     "focused_local": 0,
     "full_local": 0
   },
-  "he_IL": {
+  "he-IL": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "hi_IN": {
+  "hi-IN": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "hr_HR": {
+  "hr-HR": {
     "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
-  "hu_HU": {
+  "hu-HU": {
     "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
-  "id_ID": {
+  "id-ID": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "is_IS": {
+  "is-IS": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "it_IT": {
-    "cloud": 3,
-    "focused_local": 2,
-    "full_local": 3
-  },
-  "ka_GE": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "kn_IN": {
-    "cloud": 0,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "ko_KR": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "lb_LU": {
-    "cloud": 0,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "lt_LT": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "lv_LV": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "ml_IN": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "mn_MN": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "mr_IN": {
-    "cloud": 0,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "ms_MY": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "nb_NO": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "ne_NP": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "nl_BE": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "nl_NL": {
+  "it-IT": {
     "cloud": 3,
     "focused_local": 2,
-    "full_local": 0
-  },
-  "pl_PL": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "pt_PT": {
-    "cloud": 3,
-    "focused_local": 0,
     "full_local": 3
   },
-  "pt_BR": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 3
-  },
-  "ro_RO": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "ru_RU": {
+  "ka-GE": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "sk_SK": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "sl_SI": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "sr_RS": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "sv_SE": {
-    "cloud": 3,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "sw_KE": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "te_IN": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "th_TH": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "tr_TR": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "uk_UA": {
-    "cloud": 1,
-    "focused_local": 0,
-    "full_local": 0
-  },
-  "ur_IN": {
+  "kn-IN": {
     "cloud": 0,
     "focused_local": 0,
     "full_local": 0
   },
-  "vi_VN": {
+  "ko-KR": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "zh_CN": {
+  "lb-LU": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "lt-LT": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0
   },
-  "zh_HK": {
+  "lv-LV": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ml-IN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "mn-MN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "mr-IN": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ms-MY": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "nb-NO": {
     "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
-  "zh_TW": {
+  "ne-NP": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "nl-BE": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "nl-NL": {
+    "cloud": 3,
+    "focused_local": 2,
+    "full_local": 0
+  },
+  "pl-PL": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "pt-PT": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 3
+  },
+  "pt-BR": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 3
+  },
+  "ro-RO": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ru-RU": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sk-SK": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sl-SI": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sr-RS": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sv-SE": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "sw-KE": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "te-IN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "th-TH": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "tr-TR": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "uk-UA": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "ur-IN": {
+    "cloud": 0,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "vi-VN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "zh-CN": {
+    "cloud": 1,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "zh-HK": {
+    "cloud": 3,
+    "focused_local": 0,
+    "full_local": 0
+  },
+  "zh-TW": {
     "cloud": 1,
     "focused_local": 0,
     "full_local": 0

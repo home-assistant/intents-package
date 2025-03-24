@@ -6,8 +6,8 @@ This is automatically run by script/package after the data files are generated.
 """
 
 import argparse
-import logging
 import json
+import logging
 import sys
 from pathlib import Path
 from typing import Set

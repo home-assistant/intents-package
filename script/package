@@ -26,4 +26,20 @@ python3 "${base_dir}/script/write_language_scores.py" "${base_dir}/intents" > "$
 black "${intents_dir}/languages.py"
 cd "${base_dir}" && python3 -m build
 
+# Sanity check
+echo 'Running sanity check...'
+latest_wheel="$(ls -t "${base_dir}/dist"/*.whl | head -n1)"
+if [ -z "${latest_wheel}" ]; then
+    echo 'No wheel found in dist directory!'
+    exit 1
+fi
+
+test_dir="$(mktemp -d)"
+trap 'rm -rf "${test_dir}"' EXIT
+
+python3 -m venv "${test_dir}"
+test_python3="${test_dir}/bin/python3"
+"${test_python3}" -m pip install pytest "${latest_wheel}"
+"${test_python3}" -m pytest -vv "${base_dir}/tests/test_intents.py"
+
 echo "See: ${base_dir}/dist"

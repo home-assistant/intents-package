@@ -2,8 +2,8 @@
 
 import argparse
 import collections
-import logging
 import json
+import logging
 from pathlib import Path
 
 import yaml
