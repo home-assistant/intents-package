@@ -82,7 +82,7 @@ def main() -> None:
         has_complete_intents = complete_intents.issubset(supported_intents)
 
         for region, region_support in lang_support.items():
-            locale = f"{lang_family}_{region}"
+            locale = f"{lang_family}-{region}"
             stt = region_support.get("speech-to-text", {})
             tts = region_support.get("text-to-speech", {})
 
