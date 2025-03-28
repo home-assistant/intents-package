@@ -39,6 +39,10 @@ def main() -> None:
     complete_intents: Set[str] = set()
 
     for intent_name, intent_info in intents.items():
+        if not intent_info.get("supported"):
+            # Skip intents that are not supported in Home Assistant
+            continue
+
         importance = intent_info.get("importance")
         if importance == "required":
             required_intents.add(intent_name)
