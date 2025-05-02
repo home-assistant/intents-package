@@ -71,12 +71,12 @@ def main() -> None:
     for language in languages:
         # Merge language's sentence template YAML files
         merged_sentences: dict = {}
-        for sentence_file in (sentence_dir / language).iterdir():
+        for sentence_file in (sentence_dir / language).glob("*.yaml"):
             merge_dict(merged_sentences, yaml.safe_load(sentence_file.read_text()))
 
         # Merge language's response YAML files
         merged_responses: dict = {}
-        for response_file in (response_dir / language).iterdir():
+        for response_file in (response_dir / language).glob("*.yaml"):
             merge_dict(merged_responses, yaml.safe_load(response_file.read_text()))
 
         errors_translated = not any(
