@@ -1,11 +1,11 @@
 {
   "af-ZA": {
-    "cloud": 0,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "ar-JO": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -20,7 +20,7 @@
     "full_local": 0
   },
   "bn-IN": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -30,7 +30,7 @@
     "full_local": 0
   },
   "cs-CZ": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -50,7 +50,7 @@
     "full_local": 0
   },
   "el-GR": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -75,17 +75,17 @@
     "full_local": 3
   },
   "et-EE": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "eu-ES": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "fa-IR": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -100,22 +100,22 @@
     "full_local": 0
   },
   "gl-ES": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "gu-IN": {
-    "cloud": 0,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "he-IL": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "hi-IN": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -130,12 +130,12 @@
     "full_local": 0
   },
   "id-ID": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "is-IS": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -145,17 +145,17 @@
     "full_local": 3
   },
   "ka-GE": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "kn-IN": {
-    "cloud": 0,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "ko-KR": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -165,32 +165,32 @@
     "full_local": 0
   },
   "lt-LT": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "lv-LV": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "ml-IN": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "mn-MN": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "mr-IN": {
-    "cloud": 0,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "ms-MY": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -200,7 +200,7 @@
     "full_local": 0
   },
   "ne-NP": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -235,7 +235,7 @@
     "full_local": 0
   },
   "ru-RU": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -260,27 +260,27 @@
     "full_local": 0
   },
   "sw-KE": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "te-IN": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "th-TH": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "tr-TR": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "uk-UA": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -290,12 +290,12 @@
     "full_local": 0
   },
   "vi-VN": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
   "zh-CN": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   },
@@ -305,7 +305,7 @@
     "full_local": 0
   },
   "zh-TW": {
-    "cloud": 1,
+    "cloud": 3,
     "focused_local": 0,
     "full_local": 0
   }
