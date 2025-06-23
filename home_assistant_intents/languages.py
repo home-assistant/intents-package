@@ -23,6 +23,7 @@ LANGUAGES = [
     "id",
     "is",
     "it",
+    "ja",
     "ka",
     "ko",
     "kw",
